@@ -1,0 +1,27 @@
+{
+  "name": "bb-file-import",
+  "version": "1.0.0",
+  "description": "CSV, TSV and JSON import through saved Budibase queries, built with Svelte 3",
+  "license": "MIT",
+  "type": "module",
+  "svelte": "src/Component.svelte",
+  "module": "dist/plugin.min.js",
+  "scripts": {
+    "build": "rollup -c && node scripts/package.mjs",
+    "test": "node --test test/*.test.js",
+    "check": "svelte-check --fail-on-warnings",
+    "test:browser": "npm run build && node scripts/browser-smoke.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@rollup/plugin-commonjs": "28.0.9",
+    "@rollup/plugin-json": "6.1.0",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "papaparse": "5.5.3",
+    "rollup": "4.59.0",
+    "rollup-plugin-svelte": "7.2.3",
+    "svelte": "3.59.2",
+    "svelte-check": "3.8.6",
+    "tar": "7.5.11"
+  }
+}

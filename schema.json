@@ -1,0 +1,70 @@
+{
+  "type": "component",
+  "metadata": {
+    "svelteMajor": 3
+  },
+  "schema": {
+    "name": "bb-file-import",
+    "friendlyName": "File Import",
+    "description": "Import CSV, TSV or JSON through a saved write query. Budibase 3.4.1+.",
+    "icon": "Upload",
+    "settings": [
+      {
+        "type": "text",
+        "key": "title",
+        "label": "Title",
+        "defaultValue": "File Import"
+      },
+      {
+        "type": "text",
+        "key": "queryId",
+        "label": "Saved write query ID"
+      },
+      {
+        "type": "text",
+        "key": "parameterMapping",
+        "label": "Parameter mapping JSON (parameter: column)",
+        "defaultValue": "{}"
+      },
+      {
+        "type": "boolean",
+        "key": "stopOnError",
+        "label": "Stop after first failed record",
+        "defaultValue": true
+      },
+      {
+        "type": "boolean",
+        "key": "disabled",
+        "label": "Disabled",
+        "defaultValue": false
+      },
+      {
+        "type": "event",
+        "key": "onComplete",
+        "label": "On import finished",
+        "context": [
+          {
+            "label": "Succeeded",
+            "key": "succeeded"
+          },
+          {
+            "label": "Failed",
+            "key": "failed"
+          },
+          {
+            "label": "Processed",
+            "key": "processed"
+          },
+          {
+            "label": "Total",
+            "key": "total"
+          },
+          {
+            "label": "Cancelled",
+            "key": "cancelled"
+          }
+        ]
+      }
+    ]
+  }
+}
